@@ -1,9 +1,9 @@
-import { Heading } from "@chakra-ui/react";
+import Editor from "./components/Editor";
 function App() {
   return (
-    <div className="App fon">
-      <Heading>Hello World</Heading>
-    </div>
+    <>
+      <Editor />
+    </>
   );
 }
 
