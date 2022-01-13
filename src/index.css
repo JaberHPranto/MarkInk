@@ -1,14 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Nunito:wght@300;400&family=Poppins:wght@300;400&family=Raleway&family=Ubuntu:wght@300;400&display=swap");
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: "Lato", source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -30,17 +28,19 @@ body {
   outline: none;
   padding: 10px;
   font-size: 18px;
+  font-family: "raleway";
 }
 .output {
   font-size: 18px;
   width: 35vw;
   min-height: 540px;
-  background: #222;
+  background: #282c34;
   border-radius: 10px;
   margin-left: 20px;
   padding: 10px;
   color: #fff;
   line-height: 3rem;
+  font-family: "Poppins";
 }
 .output a {
   color: red;
@@ -50,4 +50,14 @@ tr,
 td,
 th {
   border: 1px solid #555;
+}
+
+root {
+  /* color:#282c34, */
+  /* color:#0A99bbff, */
+  /* color:#43495, */
+  /* color:#56b6c, */
+  /* color:#21252, */
+  /* color:#434957, */
+  /* color:#4Dff0000, */
 }
