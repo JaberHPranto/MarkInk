@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  padding: 1rem 0.6rem;
+}
+.textarea,
+.output {
+  height: 83vh;
+}
+.textarea {
+  /* max-height: 100vh; */
+  background: #f1f1f1;
+  border-radius: 10px;
+  outline: none;
+  padding: 10px;
+  font-size: 18px;
+  font-family: "raleway";
+  min-width: 30rem;
+  /* flex-grow: 1; */
+}
+.output {
+  font-size: 18px;
+  overflow-y: hidden;
+  background: var(--color-bg);
+  border-radius: 10px;
+  margin-left: 20px;
+  padding: 10px 20px;
+  color: #fff;
+  line-height: 3rem;
+  font-family: "nunito";
+  min-width: 30rem;
+  /* flex-grow: 1; */
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+}
+.full {
+  min-width: 60rem !important;
+}
+.output h1,
+h2,
+p,
+a {
+  color: var(--color-white);
+}
+.output table,
+tr,
+td,
+th {
+  border: 1px solid #555;
+}

@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Nunito:wght@300;400&family=Poppins:wght@300;400&family=Raleway&family=Ubuntu:wght@300;400&display=swap");
+
+:root {
+  --color-bg: #282c34;
+  --color-blue: #61afef;
+  --color-purple: #c678dd;
+  --color-green: #98c379;
+  --color-yellow: #e5c07b;
+  --color-red: #e06c75;
+  --color-white: #abb2bf;
+  --color-cyan: #56b6c2;
+}
 body {
   margin: 0;
   padding: 0;
@@ -11,53 +22,29 @@ code {
 }
 
 body {
-  background: #111317;
+  /* min-height: 100vh; */
+}
+.navbar {
+  background-color: #e06c75;
+  padding: 1rem;
+  font-family: "Lato";
+  height: 2rem;
+  font-size: 1rem;
+}
+.main-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  min-height: 91vh;
+  /* min-width: 100%; */
 }
-.container {
-  display: flex;
+.main_sidebar_1 {
+  background-color: #56b6c2;
+  min-width: 15%;
 }
-.textarea {
-  width: 35vw;
-  height: 540px;
-  background: #f1f1f1;
-  border-radius: 10px;
-  outline: none;
-  padding: 10px;
-  font-size: 18px;
-  font-family: "raleway";
+.main_sidebar_2 {
+  background-color: #98c379;
+  min-width: 15%;
 }
-.output {
-  font-size: 18px;
-  width: 35vw;
-  min-height: 540px;
-  background: #282c34;
-  border-radius: 10px;
-  margin-left: 20px;
-  padding: 10px;
-  color: #fff;
-  line-height: 3rem;
-  font-family: "Poppins";
-}
-.output a {
-  color: red;
-}
-.output table,
-tr,
-td,
-th {
-  border: 1px solid #555;
-}
-
-root {
-  /* color:#282c34, */
-  /* color:#0A99bbff, */
-  /* color:#43495, */
-  /* color:#56b6c, */
-  /* color:#21252, */
-  /* color:#434957, */
-  /* color:#4Dff0000, */
+.main_editor {
+  background-color: #e5c07b;
+  min-width: 70%;
 }
