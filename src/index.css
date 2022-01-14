@@ -17,12 +17,11 @@ body {
 }
 
 code {
-  font-family: "Lato", source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: "Lato", sans-serif;
 }
 
 body {
-  /* min-height: 100vh; */
+  font-family: "Lato", sans-serif;
 }
 .navbar {
   background-color: #e06c75;
@@ -31,20 +30,16 @@ body {
   height: 2rem;
   font-size: 1rem;
 }
-.main-container {
+.main_container {
   display: flex;
   min-height: 91vh;
   /* min-width: 100%; */
 }
-.main_sidebar_1 {
+.main_sidebar {
   background-color: #56b6c2;
-  min-width: 15%;
-}
-.main_sidebar_2 {
-  background-color: #98c379;
-  min-width: 15%;
+  min-width: 20%;
 }
 .main_editor {
   background-color: #e5c07b;
-  min-width: 70%;
+  min-width: 80%;
 }

@@ -5,6 +5,7 @@
 .textarea,
 .output {
   height: 83vh;
+  width: 35rem;
 }
 .textarea {
   /* max-height: 100vh; */
@@ -14,7 +15,7 @@
   padding: 10px;
   font-size: 18px;
   font-family: "raleway";
-  min-width: 30rem;
+  /* min-width: 40rem; */
   /* flex-grow: 1; */
 }
 .output {
@@ -27,14 +28,18 @@
   color: #fff;
   line-height: 3rem;
   font-family: "nunito";
-  min-width: 30rem;
+  /* min-width: 40rem; */
   /* flex-grow: 1; */
   overflow-x: hidden;
   overflow-y: auto;
   text-align: justify;
+  word-break: break-all;
 }
-.full {
-  min-width: 60rem !important;
+.text_full {
+  min-width: 73rem !important;
+}
+.markdown_full {
+  min-width: 70rem !important;
 }
 .output h1,
 h2,

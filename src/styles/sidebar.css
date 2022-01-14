@@ -1,0 +1,26 @@
+.sidebar_container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar_icons {
+  width: 20%;
+  background-color: chocolate;
+}
+.sidebar_info {
+  width: 80%;
+  background-color: pink;
+}
+.sidebar_icons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.sidebar_icons > * {
+  margin-bottom: 2rem;
+  transform: scale(1.2);
+  color: black;
+  cursor: pointer;
+}
