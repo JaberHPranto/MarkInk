@@ -1,6 +1,9 @@
 .sidebar_container {
   display: flex;
-  height: 100vh;
+  height: 90vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* text-align: justify; */
 }
 
 .sidebar_icons {

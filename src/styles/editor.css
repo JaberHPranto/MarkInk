@@ -5,18 +5,15 @@
 .textarea,
 .output {
   height: 83vh;
-  width: 35rem;
+  width: 50%;
 }
 .textarea {
-  /* max-height: 100vh; */
   background: #f1f1f1;
   border-radius: 10px;
   outline: none;
   padding: 10px;
   font-size: 18px;
   font-family: "raleway";
-  /* min-width: 40rem; */
-  /* flex-grow: 1; */
 }
 .output {
   font-size: 18px;
@@ -28,18 +25,16 @@
   color: #fff;
   line-height: 3rem;
   font-family: "nunito";
-  /* min-width: 40rem; */
-  /* flex-grow: 1; */
   overflow-x: hidden;
   overflow-y: auto;
   text-align: justify;
   word-break: break-all;
 }
 .text_full {
-  min-width: 73rem !important;
+  min-width: 98% !important;
 }
 .markdown_full {
-  min-width: 70rem !important;
+  min-width: 95% !important;
 }
 .output h1,
 h2,
@@ -52,4 +47,7 @@ tr,
 td,
 th {
   border: 1px solid #555;
+}
+.output blockquote p {
+  color: red;
 }
