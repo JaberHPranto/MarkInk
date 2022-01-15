@@ -23,7 +23,7 @@ function Layout() {
   return (
     <div className="main_container">
       <div className="main_sidebar">
-        <Sidebar />
+        <Sidebar text={text} setText={setText} />
       </div>
       <div className="main_editor">
         <EditorHeader

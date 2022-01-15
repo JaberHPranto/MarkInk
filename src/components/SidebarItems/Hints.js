@@ -1,25 +1,45 @@
 import React from "react";
 import "../../styles/sidebar.hints.css";
+import {
+  basicTemplates,
+  extendedTemplate,
+  getTemplate,
+} from "../MarkdownTemplate/template";
 
-function Hints() {
+function Hints({ text, setText }) {
+  const handleAdd = (e, type) => {
+    const markdownText = getTemplate(e.target.innerText, type);
+    if (markdownText) {
+      setText((prevState) => {
+        return prevState + markdownText?.markdown;
+      });
+    }
+
+    console.log(markdownText);
+  };
   return (
     <div className="wrapper">
       <Accordion title="Basic markdown syntax">
-        <button className="accordion-btn">Heading level 1</button>
-        <button className="accordion-btn">Heading level 2</button>
-        <button className="accordion-btn">Heading level 3</button>
-        <button className="accordion-btn">Bold</button>
-        <button className="accordion-btn">Italic</button>
-        <button className="accordion-btn">Bold & Italic</button>
-        <button className="accordion-btn">Blockquote</button>
-        <button className="accordion-btn">Strike-through</button>
+        {basicTemplates.map((template) => (
+          <button
+            className="accordion-btn"
+            key={template.id}
+            onClick={(e) => handleAdd(e, "basic")}
+          >
+            {template.title}
+          </button>
+        ))}
       </Accordion>
       <Accordion title="Extended markdown syntax">
-        <button className="accordion-btn">List</button>
-        <button className="accordion-btn">Nested List</button>
-        <button className="accordion-btn">Tables</button>
-        <button className="accordion-btn">Task Lists</button>
-        <button className="accordion-btn">Horizontal Rule</button>
+        {extendedTemplate.map((template) => (
+          <button
+            className="accordion-btn"
+            key={template.id}
+            onClick={(e) => handleAdd(e, "extended")}
+          >
+            {template.title}
+          </button>
+        ))}
       </Accordion>
       <Accordion title="Advance markdown">
         <button className="accordion-btn">Links</button>

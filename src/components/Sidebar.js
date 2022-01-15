@@ -6,7 +6,7 @@ import "../styles/sidebar.css";
 import Hints from "./SidebarItems/Hints";
 import Notes from "./SidebarItems/Notes";
 
-function Sidebar() {
+function Sidebar({ text, setText }) {
   const [info, setInfo] = useState("hints");
 
   return (
@@ -23,7 +23,7 @@ function Sidebar() {
         </div>
       </div>
       <div className="sidebar_info">
-        {info === "hints" ? <Hints /> : <Notes />}
+        {info === "hints" ? <Hints text={text} setText={setText} /> : <Notes />}
       </div>
     </div>
   );
