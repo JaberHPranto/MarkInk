@@ -65,3 +65,6 @@
   border: 2px solid greenyellow;
   /* transition: background-color 0.17s ease, color 0.17s ease; */
 }
+.accordion-btn:not(:last-child) {
+  margin-bottom: 0.5rem;
+}

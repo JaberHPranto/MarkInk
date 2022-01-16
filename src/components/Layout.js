@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/editor.css";
-import Editor from "./Editor/Editor";
+import EditorComponent from "./Editor/Editor";
 import EditorHeader from "./Editor/EditorHeader";
 import Sidebar from "./Sidebar";
 
@@ -10,15 +10,9 @@ function Layout() {
   const [textEditor, setTextEditor] = useState(true);
 
   const handleInputChange = (e) => {
-    const inputValue = e.target.value;
-    setText(inputValue);
+    // const inputValue = e.target.value;
+    setText(e);
   };
-
-  // const handleAdd = () => {
-  //   setText((prevState) => {
-  //     return prevState + "# Heading 1 \n";
-  //   });
-  // };
 
   return (
     <div className="main_container">
@@ -33,7 +27,7 @@ function Layout() {
           setMarkdownEditor={setMarkdownEditor}
         />
 
-        <Editor
+        <EditorComponent
           text={text}
           markdownEditor={markdownEditor}
           textEditor={textEditor}

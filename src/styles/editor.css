@@ -2,55 +2,100 @@
   display: flex;
   padding: 1rem 0.6rem;
 }
-.textarea,
 .output {
-  height: 83vh;
-  width: 50%;
+  height: 83vh !important;
+}
+.cm-editor {
+  height: 83vh !important;
+  /* width: 35rem !important; */
+  font-family: "raleway" !important;
+  border-radius: 10px;
 }
 .textarea {
-  background: #f1f1f1;
   border-radius: 10px;
   outline: none;
   padding: 10px;
   font-size: 18px;
   font-family: "raleway";
 }
+.container section {
+  padding: 1rem;
+}
+.monaco-editor {
+  font-family: "poppins";
+}
 .output {
   font-size: 18px;
   overflow-y: hidden;
   background: var(--color-bg);
   border-radius: 10px;
-  margin-left: 20px;
+  margin-left: 10px;
   padding: 10px 20px;
   color: #fff;
   line-height: 3rem;
+  width: 50%;
   font-family: "nunito";
   overflow-x: hidden;
   overflow-y: auto;
   text-align: justify;
   word-break: break-all;
 }
-.text_full {
-  min-width: 98% !important;
-}
 .markdown_full {
   min-width: 95% !important;
 }
 .output h1,
 h2,
-p,
-a {
-  color: var(--color-white);
+h3 {
+  color: var(--color-blue);
 }
 .output p {
   line-height: 130%;
+  color: var(--color-white);
+}
+.output a {
+  color: var(--color-red);
+}
+.output ul li {
+  color: var(--color-green);
+}
+.output ul li ul li {
+  color: #98c379cb;
 }
 .output table,
 tr,
 td,
 th {
   border: 1px solid #555;
+  color: var(--color-yellow);
+}
+.output th,
+td {
+  padding: 0 0.4rem;
+}
+.output table,
+th {
+  color: #dcab4d;
+}
+.output table td code {
+  background-color: #edd5a6;
+  color: #ca9228;
+  font-size: 0.9rem;
+  padding: 2px 8px;
+  border-radius: 1rem;
+  /* border: 1px solid #f2e0bd; */
 }
 .output blockquote p {
-  color: red;
+  color: var(--color-purple);
 }
+
+.output ul .task-list-item #text {
+  color: red !important;
+}
+
+/* .output blockquote::before {
+  content: "|";
+  height: 2rem;
+  width: 0.5rem;
+  margin-left: -2rem;
+  background-color: #dcab4d;
+} */
