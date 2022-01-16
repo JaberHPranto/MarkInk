@@ -1,9 +1,11 @@
 import React from "react";
 import "../../styles/sidebar.hints.css";
 import {
+  advanceTemplate,
   basicTemplates,
   extendedTemplate,
   getTemplate,
+  githubTemplate,
 } from "../MarkdownTemplate/template";
 
 function Hints({ text, setText }) {
@@ -14,54 +16,32 @@ function Hints({ text, setText }) {
         return prevState + markdownText?.markdown;
       });
     }
+  };
 
-    console.log(markdownText);
+  const getAccordionItems = (templates, type) => {
+    return templates.map((template) => (
+      <button
+        className="accordion-btn"
+        key={template.id}
+        onClick={(e) => handleAdd(e, type)}
+      >
+        {template.title}
+      </button>
+    ));
   };
   return (
     <div className="wrapper">
       <Accordion title="Basic markdown syntax">
-        {basicTemplates.map((template) => (
-          <button
-            className="accordion-btn"
-            key={template.id}
-            onClick={(e) => handleAdd(e, "basic")}
-          >
-            {template.title}
-          </button>
-        ))}
+        {getAccordionItems(basicTemplates, "basic")}
       </Accordion>
       <Accordion title="Extended markdown syntax">
-        {extendedTemplate.map((template) => (
-          <button
-            className="accordion-btn"
-            key={template.id}
-            onClick={(e) => handleAdd(e, "extended")}
-          >
-            {template.title}
-          </button>
-        ))}
+        {getAccordionItems(extendedTemplate, "extended")}
       </Accordion>
       <Accordion title="Advance markdown">
-        <button className="accordion-btn">Links</button>
-        <button className="accordion-btn">Urls</button>
-        <button className="accordion-btn">Images</button>
-        <button className="accordion-btn">Code Blocks</button>
+        {getAccordionItems(advanceTemplate, "advance")}
       </Accordion>
       <Accordion title="Github markdown">
-        <button className="accordion-btn">API Reference</button>
-        <button className="accordion-btn">Authors</button>
-        <button className="accordion-btn">Badges</button>
-        <button className="accordion-btn">Demo</button>
-        <button className="accordion-btn">Deployment</button>
-        <button className="accordion-btn">Features</button>
-        <button className="accordion-btn">Github - About me</button>
-        <button className="accordion-btn">Installation</button>
-        <button className="accordion-btn">Logo</button>
-        <button className="accordion-btn">Run Locally</button>
-        <button className="accordion-btn">Screenshots</button>
-        <button className="accordion-btn">Title & Description</button>
-        <button className="accordion-btn">Tech</button>
-        <button className="accordion-btn">Usage</button>
+        {getAccordionItems(githubTemplate, "github")}
       </Accordion>
       <Accordion title="Mathematics markdown">Not completed yet</Accordion>
     </div>

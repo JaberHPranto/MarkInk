@@ -42,6 +42,9 @@ p,
 a {
   color: var(--color-white);
 }
+.output p {
+  line-height: 130%;
+}
 .output table,
 tr,
 td,
