@@ -13,10 +13,24 @@ function EditorComponent({
   textEditor,
   markdownEditor,
   text,
+  setText,
   handleInputChange,
 }) {
   const handleChange = (e) => {
     handleInputChange(e);
+  };
+
+  const handleKey = (str) => {
+    console.log(text);
+    setText((prevState) => {
+      prevState = prevState
+        .replace(/\w+[.!?]?$/, "")
+        .replace(/\/$/, "")
+        .replace(/\/$/, "");
+      return prevState.replace(/\w+[.!?]?$/, "") + `\n ${str} `;
+    });
+
+    // console.log(e);
   };
 
   return (
@@ -30,16 +44,20 @@ function EditorComponent({
       )} */}
       {textEditor && (
         <CodeMirror
-          className="textarea"
+          className={markdownEditor ? "textarea" : "textarea t_full"}
           value={text}
-          width={markdownEditor ? "35rem" : "67rem"}
+          // width={markdownEditor ? "35rem" : "67rem"}
           theme={oneDark}
+          autoFocus
           extensions={[
             markdown({ base: markdownLanguage, codeLanguages: languages }),
           ]}
+          // onKeyUp={handleKey}
           onChange={(value, viewUpdate) => {
-            console.log("value:", value);
-            handleChange(value);
+            // if (value.split(" ").pop() === "/h1") handleKey();
+            if (value.includes("//h1")) handleKey("# h1");
+            if (value.includes("//h2")) handleKey("## h2");
+            else handleChange(value);
           }}
         />
       )}

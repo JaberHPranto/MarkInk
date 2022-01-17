@@ -30,6 +30,7 @@ function Layout() {
         <EditorComponent
           text={text}
           markdownEditor={markdownEditor}
+          setText={setText}
           textEditor={textEditor}
           handleInputChange={handleInputChange}
         />

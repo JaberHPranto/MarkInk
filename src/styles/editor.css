@@ -7,7 +7,6 @@
 }
 .cm-editor {
   height: 83vh !important;
-  /* width: 35rem !important; */
   font-family: "raleway" !important;
   border-radius: 10px;
 }
@@ -15,8 +14,16 @@
   border-radius: 10px;
   outline: none;
   padding: 10px;
+  width: 50% !important;
   font-size: 18px;
   font-family: "raleway";
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  word-break: break-all;
+}
+.t_full {
+  width: 97% !important;
 }
 .container section {
   padding: 1rem;
@@ -29,7 +36,7 @@
   overflow-y: hidden;
   background: var(--color-bg);
   border-radius: 10px;
-  margin-left: 10px;
+  margin-left: 5px;
   padding: 10px 20px;
   color: #fff;
   line-height: 3rem;
