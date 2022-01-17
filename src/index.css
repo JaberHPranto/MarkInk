@@ -32,14 +32,15 @@ body {
 }
 .main_container {
   display: flex;
-  min-height: 91vh;
+  height: 100vh;
   /* min-width: 100%; */
 }
 .main_sidebar {
-  background-color: #56b6c2;
+  background-color: #2e323c;
   min-width: 20%;
+  /* height: 100%; */
 }
 .main_editor {
-  background-color: #e5c07b;
+  background-color: #1e2127;
   min-width: 80%;
 }
